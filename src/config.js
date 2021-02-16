@@ -1,4 +1,4 @@
-const prod = {
+const dev = {
     apiGateway: {
         REGION: "us-east-2",
         URL: "https://dlmail3s7j.execute-api.us-east-2.amazonaws.com/prod/",
