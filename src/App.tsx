@@ -38,7 +38,6 @@ function App() {
       {currentUser && (
         <div>
           <PrettyPrintJson data={currentUser} />
-          <ShowPermissionRevokeLinks />
           <MainForm />
         </div>
       )}
