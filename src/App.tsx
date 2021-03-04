@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div id="App">
-      <h2>Microsoft Login Button application</h2>
+      <h2>Ads Edit</h2>
       <AzureAuthenticationButton onAuthenticated={onAuthenticated} />
       {currentUser && (
         <div>

@@ -7,6 +7,14 @@ import Amplify from 'aws-amplify';
 import config from './config';
 
 Amplify.configure({
+  Auth: {
+    region: config.cognito.REGION,
+    identityPoolId: config.cognito.IDENTITY_POOL_ID,
+  },
+  Storage: {
+    region: config.s3.REGION,
+    bucket: config.s3.BUCKET
+  },
   API: {
     endpoints: [
       {
