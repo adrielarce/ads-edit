@@ -83,7 +83,7 @@ class CsvDownloadComponent extends Component {
         //setIsLoading(true);
         try {
             const ads = await this.searchForDownload(this.state.csv_search_field, this.state.csv_search_type, this.state.csv_search_field_value);
-            console.log(ads);
+            //console.log(ads);
             if (ads.length > 0) {
                 console.log(ads.length + " ads returned");
                 if (this.state.csv_all_columns) {

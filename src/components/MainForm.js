@@ -239,7 +239,6 @@ class MainForm extends Component {
                         params.image = image.stored.key;
                         params.image_url = image.stored_url;
                         const update_res = await this.updateAID(params);
-                        console.log(update_res.status);
                         if (update_res.status)
                             window.alert(`Updated ad ${this.state.aid} succesfully`);
                     }
@@ -340,6 +339,7 @@ class MainForm extends Component {
     }
     s3Upload = async file => {
         const filename = file.name;
+        console.log(file);
         const stored = await Storage.vault.put(filename, file, {
             acl: 'public-read',
             contentType: file.type,
@@ -448,6 +448,7 @@ class MainForm extends Component {
             });
             //set the image file
             const stored_download = await Storage.vault.get(foundAd.image, { download: true });
+            console.log(stored_download);
             const imageFile = new File([stored_download.Body], foundAd.image, { type: stored_download.ContentType });
             this.setState({ imageFile: imageFile });
             //console.log(this.state);
