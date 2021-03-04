@@ -14,7 +14,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import { withStyles } from '@material-ui/core/styles';
 import { API } from "aws-amplify";
-import { CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 
 /*
 const csvData = [
@@ -576,10 +576,10 @@ class CsvDownloadComponent extends Component {
                 </Grid>
                 <Grid item sm={12}>
                     <Button variant="contained" color="secondary" onClick={this.handleDownload}>
-                        Download
+                        Generate CSV
                     </Button>
 
-                    {this.state.csv_data.length != 0 ? <CSVDownload filename={"ads.csv"} data={this.state.csv_data} /> : null}
+                    {this.state.csv_data.length != 0 ? <CSVLink data={this.state.csv_data} filename="ads.csv">Download me</CSVLink> : null}
                 </Grid>
             </React.Fragment>
         );
